@@ -5,8 +5,8 @@ set -euxo pipefail
 
 DOCKERHOOK=dockerhook
 
-sv down    "$DOCKERHOOK"
 sv stop    "$DOCKERHOOK"
+sv down    "$DOCKERHOOK"
 sv disable "$DOCKERHOOK"
 rm -v "/var/service/$DOCKERHOOK"
 
