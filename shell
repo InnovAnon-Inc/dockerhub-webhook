@@ -1,0 +1,7 @@
+#! /bin/sh
+set -eux
+
+. .venv/bin/activate
+gunicorn dockerhook:app -w 1 -b 127.0.0.1:3000
+#gunicorn dockerhook:app -w 1 -b [::1]:3000
+
