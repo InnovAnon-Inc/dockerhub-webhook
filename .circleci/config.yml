@@ -13,17 +13,21 @@ jobs:
       - run: git submodule update --init
 
       - run:
+          name: Configure
+          command: |
+            echo abc123 > .env/DOCKERHOOK_TOKEN
+      - run:
           name: Install
           command: |
-            ./install.sh
+            sudo ./install.sh
       - run:
           name: Activate
           command: |
-            ./activate.sh
+            sudo ./activate.sh
       - run:
           name: Uninstall
           command: |
-            ./uninstall.sh
+            sudo ./uninstall.sh
 #      - run:
 #          name: Notify DockerHub
 #          command: |
