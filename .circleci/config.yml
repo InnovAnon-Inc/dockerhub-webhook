@@ -46,3 +46,5 @@ workflows:
           filters:
             branches:
               ignore: gh-pages
+          context: github personal access token
+
