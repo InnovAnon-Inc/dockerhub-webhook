@@ -13,4 +13,7 @@ REST API Service to receive DockerHub Web Hooks
   sudo ./install.sh
   ```
 - Activate the service:
-  ```sudo ./activate.sh```
+  ```
+  sudo ./activate.sh
+  ```
+
