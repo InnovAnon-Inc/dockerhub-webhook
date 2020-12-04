@@ -42,7 +42,8 @@ jobs:
 #          command: |
 #            curl -X POST "$DOCKERHUB_TRIGGER"
       - slack/status:
-          fail_only: true
+          event: fail
+          template: basic_fail_1
 
 workflows:
   version: 2
