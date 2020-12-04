@@ -1,10 +1,4 @@
-### Secret ###
-/config.py
-
 ### Python ###
-
-# Virtual environment
-venv/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -99,3 +93,4 @@ ENV/
 .ropeproject
 
 # End of https://www.gitignore.io/api/python
+#

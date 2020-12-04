@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eux
+#exec 2>&1
+exec env -C /srv/dockerhook -     \
+  HOME=/srv/dockerhook            \
+  chpst -u dockerhook:dockerhook  \
+    -e /srv/dockerhook/.env       \
+    -v -n +19 -0                  \
+    -L /srv/dockerhook/lock       \
+  /srv/dockerhook/shell 2>&1
+
