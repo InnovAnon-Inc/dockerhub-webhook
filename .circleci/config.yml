@@ -41,9 +41,9 @@ jobs:
 #          name: Notify DockerHub
 #          command: |
 #            curl -X POST "$DOCKERHUB_TRIGGER"
-      - slack/status:
-          event: fail
-          template: basic_fail_1
+      #- slack/status:
+      #    event: fail
+      #    template: basic_fail_1
 
 workflows:
   #version: 2
