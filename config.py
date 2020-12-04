@@ -10,4 +10,5 @@ APIKEY = 'abc123'
 HOOKS = {'virtual-temple': 'scripts/virtual-temple.sh'}
 
 JSONIFY_PRETTYPRINT_REGULAR = False
+#DEBUG = False
 
