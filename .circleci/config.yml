@@ -23,7 +23,7 @@ jobs:
             sudo addgroup docker
             sudo mkdir -v /etc/sv /var/service
             echo '#! /bin/true' | sudo tee /bin/sv
-            sudo chmod -v /bin/sv
+            sudo chmod -v +x /bin/sv
             sudo ./install.sh
       - run:
           name: Activate
