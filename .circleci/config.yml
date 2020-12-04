@@ -4,7 +4,7 @@ orbs:
   slack: circleci/slack@4.1.3
 
 jobs:
-  build:
+  build-test-and-notify:
     docker:
       - image: circleci/python:latest
         auth:
@@ -48,7 +48,7 @@ workflows:
   version: 2
   build:
     jobs:
-      - build:
+      - build-test-and-notify:
           filters:
             branches:
               ignore: gh-pages
