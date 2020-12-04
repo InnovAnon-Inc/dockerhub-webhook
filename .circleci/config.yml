@@ -1,0 +1,39 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/python:latest
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    working_directory: ~/circleci-dockerhook
+    steps:
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+
+      - run:
+          name: Install
+          command: |
+            ./install.sh
+      - run:
+          name: Activate
+          command: |
+            ./activate.sh
+      - run:
+          name: Uninstall
+          command: |
+            ./uninstall.sh
+#      - run:
+#          name: Notify DockerHub
+#          command: |
+#            curl -X POST "$DOCKERHUB_TRIGGER"
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
