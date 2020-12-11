@@ -8,9 +8,12 @@ APIKEY = 'abc123'
 
 # Add your script using the name of your repository as the key
 HOOKS = {
-  'virtual-temple': 'scripts/virtual-temple.sh',
-  'ircd'          : 'scripts/ircd.sh',
-  'zenbot'        : 'scripts/zenbot.sh',
+  'dockerhub-home'   : 'scripts/dockerhub-webhook.sh',
+  'dockerhub-webhook': 'scripts/dockerhub-webhook.sh',
+  'honeypot'         : 'scripts/honeypot.sh',
+  'ircd'             : 'scripts/ircd.sh',
+  'virtual-temple'   : 'scripts/virtual-temple.sh',
+  'zenbot'           : 'scripts/zenbot.sh',
 }
 
 JSONIFY_PRETTYPRINT_REGULAR = False
