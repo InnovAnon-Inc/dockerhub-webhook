@@ -11,3 +11,9 @@ docker service update           \
   --image innovanon/ircd:latest \
   ircd_ircd
 
+docker service update           \
+  --with-registry-auth          \
+  --force                       \
+  --image innovanon/ircd:latest \
+  ircd-ssl_ircd-ssl
+

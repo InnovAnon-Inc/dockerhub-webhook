@@ -3,6 +3,8 @@ set -euxo pipefail
 (( $UID ))
 (( ! $# ))
 
+# TODO . .env
+
 docker pull mongo:latest
 docker pull mrvautin/adminmongo
 docker pull fculpo/zenbot:latest
