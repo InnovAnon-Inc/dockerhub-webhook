@@ -12,6 +12,7 @@ HOOKS = {
   'dockerhub-webhook': 'scripts/dockerhub-webhook.sh',
   'honeypot'         : 'scripts/honeypot.sh',
   'ircd'             : 'scripts/ircd.sh',
+  'smug-broker'      : 'scripts/smug.sh',
   'virtual-temple'   : 'scripts/virtual-temple.sh',
   'zenbot'           : 'scripts/zenbot.sh',
 }
